@@ -5,6 +5,7 @@ import org.newdawn.slick.BasicGame;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
+import org.newdawn.slick.Input;
 
 /*
  * @author Kenny Jones
@@ -32,8 +33,16 @@ public class Game extends BasicGame {
 	}
 	@Override
 	public void update(GameContainer container, int delta) throws SlickException {
-		
+		processInput();
 	}
+    /* 
+     * Checks if keys are down, calls functions on it.
+     */
+    public void processInput() {
+        if (input.isKeyDown(Input.KEY_SPACE)) {
+            player.DOSOMETHING
+        }
+    }
 	public void render(GameContainer container, Graphics g) throws SlickException {
 		//g.setAntiAlias(true);
 		world.draw();
